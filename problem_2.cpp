@@ -14,7 +14,7 @@ void Fibonacci_seq(){
     sum=a+b;
     if(sum%2==0){
 	result += sum;
-	std::cout << result << endl;
+	std::cout << result << std::endl;
     }
   }
 }
