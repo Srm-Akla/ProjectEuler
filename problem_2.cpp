@@ -1,29 +1,37 @@
 /*
-This is Problem 1 from Project Euler.
+This is Problem 2 from Project Euler.
 Find more information: "https://projecteuler.net/"
 */
-#include <vector>
 #include <iostream>
-using namespace std;
 
-void Fibonacci_seq(vector<int> arr){
-  int a=0,b=1;
+void Fibonacci_seq(){
+  int a=0,b=1, result=0;
   unsigned int sum = a+b;
-  while(sum<= 4000000){
-    cout << sum << endl;
+  for(int i=0;i<50;i++){
+    if(sum > 4000000) break;
     a=b;
     b=sum;
     sum=a+b;
-    arr.push_back(sum);
-  }
-  for (auto i = arr.begin(); i != arr.end(); ++i){ //Reads the array from the begining to end
-    //sum +=  *i; //Sum of all multiples of 'a' and 'b'
-    cout << *i << ","; // prints multiples of 'a' and 'b'
+    if(sum%2==0){
+	result += sum;
+	std::cout << result << endl;
+    }
   }
 }
 
 int main(){
-  vector<int> Sum_Fibonacci;
-  Fibonacci_seq(Sum_Fibonacci);
+  Fibonacci_seq();
   return 0;
 }
+
+//Faster & Simpler Method
+/*int main(void)
+{
+	int s = 0;
+	for (int i = 1, j = 2; j < 1000000; j += i, i = j-i)
+		if (j % 2 == 0)
+			s += j;
+
+	cout << s << endl;
+	return 0;
+}*/
