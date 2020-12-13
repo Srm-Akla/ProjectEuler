@@ -1,4 +1,6 @@
 # Project_Euler
 
-Solutions for Problems 1-50 in C++
+Solutions in C++
 
+## This repo is to demostrate my expertise in C++, can be used## This repo is to demostrate my
+expertise in C++, can be used  
