@@ -11,3 +11,11 @@
  * Find the product abc.
  */
 
+
+#include <iostream>
+#include <cmath>
+
+int main(){
+
+    return 0;
+}
